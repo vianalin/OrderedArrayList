@@ -37,6 +37,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 	public void add(int index, T element) throws IllegalArgumentException{
 		add(element);
 	}
+
+	//2. override set index
 	public T set(int index, T element) throws IllegalArgumentException {
 		T result = remove(index);
 		add(element);
