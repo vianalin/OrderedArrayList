@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class NoNullTester {
 
   public static void main(String[] args) {
-    //testCreation();
+    testCreation();
     testAdd();
-    //testAddWithIndex();
-    //testSet();
+    testAddWithIndex();
+    testSet();
   }
 
   public static void testCreation() {
