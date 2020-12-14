@@ -3,10 +3,10 @@ public class Tester {
 		//testing nonullarraylist 
 		NoNullArrayList<Integer> a = new NoNullArrayList<>();
 		
-		a.add(1);
+		a.add(1); //testing add(element)
 		//a.set(0, 2);
-		a.add(4);
-		//a.add(1, 6);
+		a.add(4); //testing add(element)
+		a.add(1, 6); //testing add(index,elemt)
 		
 
 		//a.add(null); //testing add(t) null
