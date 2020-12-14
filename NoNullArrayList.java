@@ -21,7 +21,11 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		return super.set(index, t);
 	}
 
+	public boolean add(T t) throws IllegalArgumentException {
+		if(t == null) throw new IllegalArgumentException();
+		return super.add(t);
+	}
 
-
+	
 
 }
