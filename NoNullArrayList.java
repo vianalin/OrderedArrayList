@@ -7,14 +7,20 @@ import java.util.ArrayList;
 //tdlr: rejects null values with an IllegalArgumentException
 
 public class NoNullArrayList<T> extends ArrayList<T> {
-	
+	//2. constructors:
 	public NoNullArrayList() {
 		super();
 	}
-
 	public NoNullArrayList(int startingCapacity) {
 		super(startingCapacity);
 	}
+
+	//1. override set and both add methods
+	public T set(int index, T t) throws IllegalArgumentException {
+		if(t == null) throw new IllegalArgumentException();
+		return super.set(index, t);
+	}
+
 
 
 }
