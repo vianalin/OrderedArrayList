@@ -5,7 +5,6 @@ import java.util.ArrayList;
 //b) They should all throw an IllegalArgumentException when null is added, otherwise call the old add method.
 //2. Write 2 constructors: default + startingCapacity.
 //tdlr: rejects null values with an IllegalArgumentException
-
 public class NoNullArrayList<T> extends ArrayList<T> {
 	//2. constructors:
 	public NoNullArrayList() {
@@ -15,7 +14,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		super(startingCapacity);
 	}
 
-	//1. override set and both add methods
+	//1. override set and both add methods:
 	public T set(int index, T t) throws IllegalArgumentException {
 		if(t == null) throw new IllegalArgumentException();
 		return super.set(index, t);
@@ -26,6 +25,9 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		return super.add(t);
 	}
 
-	
+	public void add(int index, T t) throws IllegalArgumentException {
+		if(t == null) throw new IllegalArgumentException();
+		super.add(index, t);
+	}
 
 }
