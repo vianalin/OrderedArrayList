@@ -9,6 +9,11 @@ import java.util.ArrayList;
 //3. Constructors: default + startingCapacity constructors.
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T> {
 //This is because the type needs to be comparable to the same type or you cannot sort the items.
-
-
+	//3. constructiors:
+	public OrderedArrayList() {
+		super();
+	}
+	public OrderedArrayList(int initialCapacity) {
+		super(initialCapacity);
+	}
 }
