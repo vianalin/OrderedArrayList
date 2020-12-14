@@ -22,11 +22,16 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 		if(element == null) throw new IllegalArgumentException();
 		int index = -1;
 		for(int i = 0; i < this.size(); i++) {
-			if(item.compareTo(this.get(i)) < 0) {
+			if(element.compareTo(this.get(i)) < 0) {
 				index = i;
 				break;
 			}
 		}
+		if(index == -1) {
+			if(this.size() == 0) index = 0;
+			else index = this.size();
+		}
+		super.add(index,element);
+		return true;
 	}
-
 }
