@@ -31,9 +31,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 			if(this.size() == 0) index = 0;
 			else index = this.size();
 		}
-		super.add(index,element);
+		super.add(index, element);
 		return true;
 	}
+	
 	public void add(int index, T element) throws IllegalArgumentException{
 		add(element);
 	}

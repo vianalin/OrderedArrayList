@@ -15,11 +15,6 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 	}
 
 	//1. override set and both add methods:
-	public T set(int index, T t) throws IllegalArgumentException {
-		if(t == null) throw new IllegalArgumentException();
-		return super.set(index, t);
-	}
-
 	public boolean add(T t) throws IllegalArgumentException {
 		if(t == null) throw new IllegalArgumentException();
 		return super.add(t);
@@ -30,4 +25,8 @@ public class NoNullArrayList<T> extends ArrayList<T> {
 		super.add(index, t);
 	}
 
+	public T set(int index, T t) throws IllegalArgumentException {
+		if(t == null) throw new IllegalArgumentException();
+		return super.set(index, t);
+	}
 }
